@@ -395,8 +395,8 @@ function launchSparseConfetti() {
   // ✅ 让彩带“真正落下来”：喷射时间和清理时间分开控制
   // - sprayDuration：持续生成新彩带的时间（稀疏飘落）
   // - cleanupDelay：停止喷射后，留给彩带落到底部并自然消失的缓冲时间
-  const sprayDuration = 2600; // ✅ 喷射时间（ms）
-  const cleanupDelay  = 2600; // ✅ 停止喷射后继续存在的时间（ms）
+  const sprayDuration = 4000; // ✅ 喷射时间（ms）
+  const cleanupDelay  = 5000; // ✅ 停止喷射后继续存在的时间（ms）
   const colors = ['#ff6b8a', '#7fc9ff', '#c9b6ff'];
 
   // ✅ 稀疏：用定时器而不是每帧喷，避免过密/过耗
@@ -406,7 +406,7 @@ function launchSparseConfetti() {
       startVelocity: 5,      // ✅ 更像“飘落”
       spread: 55,
       gravity: 0.55,         // ✅ 下降更慢，能看见落下过程
-      ticks: 420,            // ✅ 粒子存活更久（避免半路消失）
+      ticks: 1020,            // ✅ 粒子存活更久（避免半路消失）
       scalar: 0.85,
       shapes: ['square'],
       colors,
